@@ -1,9 +1,358 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Anonymous Page</title>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>MOTIA</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+  <script src="static/js/index.js"></script>
 </head>
 <body>
-    <h1>This is an anonymous page for Be-Your-Outpainter</h1>
-</body>
-</html>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="xtitle is-1 publication-title" style="font-size: 45px;">Be-Your-Outpainter: Mastering Video Outpainting through Intrinsic Adaptation</h1>
+            <div class="is-size-5 publication-authors">
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="hero teaser">
+<div class="is-max-desktop">
+
+<div id="results" style='background-color: rgb(243, 242, 242)'>
+  <br>
+  <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
+    <h3 style="width: 65%;">
+      <span class="dnerf" style="text-align: center; font-size: 20px;">MOTIA:</span> 
+      A  high-quality flexible video outpainting method.       
+    </h3>
+  </div>
+  <br>
+  <div style="text-align: center;">
+    <video width="800" height="600" controls style="max-width: 100%;">
+      <source src="static/mp4/outpaint.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <br>
+</div>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light" style='background-color: white'>
+  <div class="container is-max-desktop" >
+    <div class="columns is-centered has-text-centered" >
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Video Outpainting is both essential and challenging, necessitating accurate content extrapolation while maintaining frame-to-frame consistency. 
+            Existing methods fall short in either quality or flexibility. 
+            We introduce MOTIA (Mastering outpainting Through Intrinsic Adaptation), a test-time adaptation diffusion-based method that leverages the intrinsic content and motion patterns within the source video for effective outpainting. 
+            MOTIA comprises two main phases: intrinsic adaptation and extrinsic rendering.  
+            During the intrinsic adaptation phase, the method involves creating efficient and effective pseudo outpainting tasks using the source video itself. 
+            This process encourages the model to identify and learn patterns within the source video, as well as bridging the gap between standard generative processes and outpainting. 
+            The subsequent phase, extrinsic rendering, is dedicated to the application and generalization of these learned patterns to improve outpainting outcomes. 
+            A key innovation is the adjustment of the insertion weights of the finely-tuned adapters, leveraging the diffusion model's generative prior and the acquired video patterns. 
+            Extensive evaluations underscore MOTIA's superiority, outperforming existing state-of-the-art methods in widely recognized benchmarks. 
+            Notably, these advancements are achieved without necessitating extensive, task-specific tuning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .gif-row {
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Centers items vertically within their container */
+    justify-content: space-around; /* Distributes extra space around items */
+    width: 100%; /* Ensures the row takes full width */
+  }
+  
+  .gif-cell {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+  }
+  
+  .gif-cell img {
+    width: 200px; /* Adjust width as needed */
+    margin-bottom: 10px; /* Adds some space between the GIF and the text */
+  }
+
+  .uniform-height-gif-cell {
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      height: 200px; 
+  }
+  
+  .uniform-height-gif-cell img {
+      max-height: 100%; 
+      width: auto; 
+      margin-bottom: 10px; 
+  }
+  
+</style>
+
+<div id="results" style='background-color: rgb(243, 242, 242)'>
+  <br>
+  <h2 class="tldr" style="font-size: 26px;">Demo Results</h2>
+  <div class="gif-row">
+    <div class="uniform-height-gif-cell" style="height: 320px;">
+      <img src="static/gifs/image1-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="uniform-height-gif-cell" style="height: 320px;">
+      <img src="static/gifs/image1.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+  </div>
+  <br><br>
+  <div class="gif-row">
+    <div class="uniform-height-gif-cell" style="height: 320px;">
+      <img src="static/gifs/image8-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="uniform-height-gif-cell" style="height: 320px;">
+      <img src="static/gifs/image8.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+  </div>
+  <br><br>
+  <div class="gif-row">
+    <div class="uniform-height-gif-cell" style="height: 320px;">
+      <img src="static/gifs/image10-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="uniform-height-gif-cell" style="height: 320px;">
+      <img src="static/gifs/image10.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+  </div>
+  <br><br>
+  <div class="gif-row">
+    <div class="gif-cell" style="width: 320px;">
+      <img src="static/gifs/image9-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell" style="width: 320px;">
+      <img src="static/gifs/image9.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+    <div class="gif-cell" style="width: 320px;">
+      <img src="static/gifs/image43.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell" style="width: 320px;">
+      <img src="static/gifs/image44.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+
+<div id="results" style='background-color: white'>
+  <br>
+  <h2 class="tldr" style="font-size: 26px;">Extension to Long Video Outpainting</h2>
+  <br><br>
+  <div class="gif-row">
+    <div class="gif-cell" style="width: 300px;">
+      <img src="static/gifs/image12-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell" style="width: 300px;">
+      <img src="static/gifs/image12.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+    <div class="gif-cell" style="width: 300px;">
+      <img src="static/gifs/image13-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell" style="width: 400px;">
+      <img src="static/gifs/image13.gif" style="width: 600px">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Outpainted by MOTIA</div>
+    </div>
+  </div>
+  <br><br>
+
+</div>
+
+
+
+<div id="results" style='background-color: rgb(243, 242, 242)'>
+  <br>
+  <h2 class="tldr" style="font-size: 26px;">Baseline Comparisons </h2>
+  <div class="gif-row">
+    <div class="gif-cell">
+      <img src="static/gifs/image34.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image33.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">AnimateDiff</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image31.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MagicEdit</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image32.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MOTIA</div>
+    </div>
+  </div>
+  <br>
+  <div class="gif-row">
+    <div class="gif-cell">
+      <img src="static/gifs/image35.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image37.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">AnimateDiff</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image38.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MagicEdit</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image36.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MOTIA</div>
+    </div>
+  </div>
+  <br>
+  <div class="gif-row">
+    <div class="gif-cell">
+      <img src="static/gifs/image39.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image41.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">AnimateDiff</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image42.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MagicEdit</div>
+    </div>
+    <div class="gif-cell">
+      <img src="static/gifs/image40.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MOTIA</div>
+    </div>
+  </div>
+  <br>
+  <div class="gif-row">
+    <div class="uniform-height-gif-cell">
+      <img src="static/gifs/image6-ori.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Source Video</div>
+    </div>
+    <div class="uniform-height-gif-cell">
+      <img src="static/gifs/image29.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">AnimateDiff</div>
+    </div>
+    <div class="uniform-height-gif-cell">
+      <img src="static/gifs/image30.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">AnimateDiff + ControlNet</div>
+    </div>
+  </div>
+  <br><br>
+  <div class="gif-row">
+    <div class="uniform-height-gif-cell">
+      <img src="static/gifs/image52.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">Model Scope</div>
+    </div>
+    <div class="uniform-height-gif-cell">
+      <img src="static/gifs/image6.gif">
+      <div style="font-family: 'Segoe Print', sans-serif; font-weight: bold;">MOTIA</div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of 
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> 
+            from <a href="https://github.com/vinthony">vinthony</a>, licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+
+  </html>
