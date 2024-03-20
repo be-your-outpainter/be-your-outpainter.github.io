@@ -61,7 +61,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="xtitle is-1 publication-title" style="font-size: 45px;">Be-Your-Outpainter: Mastering Video Outpainting through Intrinsic Adaptation</h1>
+            <h1 class="xtitle is-1 publication-title" style="font-size: 45px;">Be-Your-Outpainter: Mastering Video Outpainting through Input-Specific Adaptation</h1>
             <div class="is-size-5 publication-authors">
             </div>
             <br>
@@ -103,16 +103,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video Outpainting is both essential and challenging, necessitating accurate content extrapolation while maintaining frame-to-frame consistency. 
-            Existing methods fall short in either quality or flexibility. 
-            We introduce MOTIA (Mastering outpainting Through Intrinsic Adaptation), a test-time adaptation diffusion-based method that leverages the intrinsic content and motion patterns within the source video for effective outpainting. 
-            MOTIA comprises two main phases: intrinsic adaptation and extrinsic rendering.  
-            During the intrinsic adaptation phase, the method involves creating efficient and effective pseudo outpainting tasks using the source video itself. 
-            This process encourages the model to identify and learn patterns within the source video, as well as bridging the gap between standard generative processes and outpainting. 
-            The subsequent phase, extrinsic rendering, is dedicated to the application and generalization of these learned patterns to improve outpainting outcomes. 
-            A key innovation is the adjustment of the insertion weights of the finely-tuned adapters, leveraging the diffusion model's generative prior and the acquired video patterns. 
-            Extensive evaluations underscore MOTIA's superiority, outperforming existing state-of-the-art methods in widely recognized benchmarks. 
-            Notably, these advancements are achieved without necessitating extensive, task-specific tuning.
+            Video outpainting is a challenging task, aiming at generating video content outside the viewport of the input video while maintaining inter-frame and intra-frame consistency. Existing methods fall short in either generation quality or flexibility. We introduce MOTIA Mastering Video Outpainting Through Input-Specific Adaptation, a diffusion-based pipeline that leverages both the intrinsic data-specific patterns of the source video and the image/video generative prior for effective outpainting. MOTIA comprises two main phases: input-specific adaptation and pattern-aware outpainting. The input-specific adaptation phase involves conducting efficient and effective pseudo outpainting learning on the single-shot source video. This process encourages the model to identify and learn patterns within the source video, as well as bridging the gap between standard generative processes and outpainting. The subsequent phase, pattern-aware outpainting, is dedicated to the generalization of these learned patterns to generate outpainting outcomes. Additional strategies including spatial-aware insertion and noise travel are proposed to better leverage the diffusion model's generative prior and the acquired video patterns from source videos. Extensive evaluations underscore MOTIA's superiority, outperforming existing state-of-the-art methods in widely recognized benchmarks. Notably, these advancements are achieved without necessitating extensive, task-specific tuning. 
           </p>
         </div>
       </div>
