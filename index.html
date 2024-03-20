@@ -86,7 +86,7 @@
   </div>
   <br>
   <div style="text-align: center;">
-    <video width="800" height="600" controls style="max-width: 100%;">
+    <video id="myVideo" width="800" height="600" controls style="max-width: 100%;">
       <source src="static/mp4/outpaint.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -94,6 +94,12 @@
   <br>
 </div>
 
+
+<script>
+  document.getElementById("myVideo").addEventListener('loadedmetadata', function() {
+      this.playbackRate = 1.5; // 将这个值改为你想要的播放速度
+  });
+  </script>
 
 <!-- Paper abstract -->
 <section class="section hero is-light" style='background-color: white'>
